@@ -1,0 +1,24 @@
+base_number = float(input("Enter how much you want to invest: "))
+months = int(input("Enter how many months you want to invest for: "))
+multiplier = int(input("Most index funds have a return of between 8-12%.\nEnter how much you expect your return to be: "))
+month_1 = base_number
+
+i = 0
+
+    while i <= months:
+    if multiplier == 8:
+        month_1 = (month_1 + base_number) * 1.006
+    if multiplier == 9:
+        month_1 = (month_1 + base_number) * 1.006
+    if multiplier == 10:
+        month_1 = (month_1 + base_number) * 1.006
+    if multiplier == 11:
+        month_1 = (month_1 + base_number) * 1.006
+    if multiplier == 12:
+        month_1 = (month_1 + base_number) * 1.01
+
+    print("Month " + str(i) + " (" + str(i * base_number) + " total spent)", ': ', month_1)
+    i += 1
+    print(f"This is assuming an average {multiplier}% return")
+
+
