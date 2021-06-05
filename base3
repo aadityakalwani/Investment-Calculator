@@ -1,0 +1,31 @@
+base_number = float(input("Enter how much you want to invest per month: "))
+amount_of_months = int(input("Enter how many months you want to invest for: "))
+multiplier = int(input("Most index funds have a return of between 8-12%.\nEnter how much you expect your return to be: "))
+month_1 = base_number
+
+
+months = [
+# each time i loop through through the loop on line 11, I store the month's value here in a  list, so i can easily index-access it when needed.
+]
+
+for i in range(amount_of_months):
+
+    month_1 += base_number + (multiplier / 100) * month_1
+    #    month_1 += ((multiplier/100)*month_1) maybe this math is correct for monthly compound
+# this math might be wrong, interesting but i'll check this later
+    print(f"Month {i} ({i * base_number} total spent): {month_1}")
+    months.append(month_1)
+
+print(f"This is assuming an average {multiplier}% return")
+
+
+
+#this compounds monthly
+# initial = current = 1
+#for month in range(12):
+#    current += (.08/12)*current
+#    month_1 += ((multiplier/100)*month_1)
+#print(current)
+
+#this compounds yearly
+#print(initial * 1.08)
